@@ -26,7 +26,15 @@ The GitHub repo will be updated soon.
 
 
 ## Workshops and Tutorials
+### International Conference on Research in Air Transportation (ICRAT 2024)
+* Local organizing committee member for the $11^{th}$ International Conference on Research in Air Transportation (ICRAT 2024).
 
+
+### Applications of Reinforcement learning in ATM/ANS}{\textit{European Union Aviation Safety Agency (EASA), Cologne, Germany, Sept 11 -- Sept 13 2023
+* Delivered a 3-day training course and workshop at the EASA headquarters in Cologne, Germany, on the foundations of reinforcement learning and its applications in air traffic conflict detection and resolution.}
+
+### Human-AI Hybrid Teaming in ATM: Overcoming Barriers and Charting the Path Forward, Nanyang Technological University, Singapore
+* Conducted a workshop on innovative research and operational perspectives on acceptance, challenges, and operational aspects of Human and AI teaming, with speakers from the Centre for Human Performance Research (CHPR NL/USA), Air Traffic Management Research Institute, NTU Singapore, and Civil Aviation Authority of Singapore.
 
 
 
