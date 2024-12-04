@@ -1,9 +1,9 @@
 # Hi!
 
 I am Yash. I am currently a research fellow at the Air Traffic Management Research Institute, Nanyang Technological University Singapore. Here, I 
-work at the intersection of machine learning, optimization, and air traffic control, with aim to address the near future air traffic demands.
+work at the intersection of machine learning, optimization, and air traffic control, with the aim to address the near future air traffic demands.
 
-Currently, I am working in a team of 3 scientists onthe use of large language models to generate safety-critical scenarios in the en-route phase of the aircraft. The primary motivation for this work stems from the scarcity of conflict scenarios in the historical data and the complexity and iterations involved in creating such scenarios, and the difficulty in customization and interactive enhancement of the traffic scenarios using traditional techniques.
+Currently, I am working in a team of 3 scientists on the use of large language models to generate safety-critical scenarios in the en-route phase of the aircraft. The primary motivation for this work stems from the scarcity of conflict scenarios in the historical data and the complexity and iterations involved in creating such scenarios, and the difficulty in customization and interactive enhancement of the traffic scenarios using traditional techniques.
 The GitHub repo will be updated soon.
 
 ## A few past projects:
