@@ -84,5 +84,36 @@
 
       </div>
     </main>
+
+    <!-- Lightbox overlay -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
+      <button class="lightbox-close" aria-label="Close">&times;</button>
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+
+    <script>
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightbox-img');
+
+      document.querySelectorAll('.gallery-item img').forEach(function (img) {
+        img.addEventListener('click', function () {
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          lightbox.classList.add('open');
+        });
+      });
+
+      document.querySelector('.lightbox-close').addEventListener('click', close);
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) close();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') close();
+      });
+
+      function close() {
+        lightbox.classList.remove('open');
+      }
+    </script>
   </body>
 </html>
