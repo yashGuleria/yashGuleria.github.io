@@ -5300,12 +5300,15 @@ a img {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
-  transition: box-shadow 0.25s, transform 0.25s;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  z-index: 1;
 }
 
 .gallery-item:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.13);
-  transform: translateY(-3px);
+  transform: scale(1.06);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  z-index: 10;
 }
 
 .gallery-item img {
@@ -5314,11 +5317,6 @@ a img {
   object-fit: cover;
   display: block;
   cursor: zoom-in;
-  transition: transform 0.3s ease;
-}
-
-.gallery-item img:hover {
-  transform: scale(1.06);
 }
 
 .gallery-item-info {
