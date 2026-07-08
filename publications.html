@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Yash Guleria" />
+    <title>Publications — Yash Guleria</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <nav class="sub-header">
+      <a href="./index.html" class="sub-header-title">Yash Guleria</a>
+      <div class="sub-header-nav">
+        <a href="./index.html">About</a>
+        <a href="./publications.html" class="active">Publications</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./activities.html">Activities</a>
+      </div>
+    </nav>
+
+    <main class="page-content">
+      <h1>Publications &amp; Projects</h1>
+
+      <p>
+        For a complete list of publications, please visit my Google Scholar profile:
+        <a class="project-link" target="_blank" href="https://scholar.google.com/citations?user=_8dbNYUAAAAJ&hl=en">Google Scholar</a>.
+        A few recent projects are listed below:
+      </p>
+
+      <article class="publication-card">
+        <h3>Text2Traffic: Retrieval Enhanced In-Context Learning For Complex Air Traffic Scenario Generation</h3>
+        <ul>
+          <li>Developed a RAG-enabled LLM approach to generate complex air traffic scenarios.</li>
+          <li>Compared retrieval capabilities of models such as Cohere's Command r, Llama3.1-8b-Instruct, and GPT3.5-Turbo.</li>
+          <li>The methodology enables quick and customizable air traffic scenario generation based on natural language inputs from the user.</li>
+        </ul>
+        <div align="center">
+          <img src="./assets/img/methodology_1.png" alt="Text2Traffic methodology diagram" width="800">
+          <p><small><i>Text2Traffic Methodology: Based on user input, Text2Traffic leverages Retrieval-Augmented Generation (RAG) to extract relevant sector information, including airways, waypoints,
+            and aircraft types, from a domain-specific document, enabling the generation of the requested air traffic scenario.</i></small></p>
+        </div>
+        <h5>Tools and technologies used</h5>
+        <div class="tag-list">
+          <span class="tag">Retrieval Augmented Generation (RAG)</span>
+          <span class="tag">LLMs (GPT3.5-Turbo, Llama3.1-8b-Instruct)</span>
+          <span class="tag">Langchain</span>
+          <span class="tag">Syntactic and semantic performance evaluation</span>
+          <span class="tag">Maximal Marginal relevance (MMR)</span>
+        </div>
+      </article>
+
+      <article class="publication-card">
+        <h3>Towards conformal automation in air traffic control: Learning conflict resolution strategies through behavior cloning</h3>
+        <ul>
+          <li>Developed a novel methodology incorporating supervised machine learning, to predict air traffic controllers' conflict resolution strategies.</li>
+          <li>Developed an experimental interface in collaboration with EUROCONTROL, to conduct human-in-loop experiments with expert air traffic controllers from Singapore and France.</li>
+          <li>Performed human-in-loop validation experiments to test the acceptability of machine-learning prediction for air traffic conflict resolution.</li>
+          <li>Developed a reinforcement learning-based model to incorporate air traffic controller's knowledge into an agent capable of performing ATCO-like conflict resolution.</li>
+        </ul>
+        <div align="center">
+          <img src="./assets/img/Methodology_conformal_CR.png" alt="Conformal automation diagram" width="800">
+          <p><small><i>End-to-end conflict resolution pipeline using ATCO-conformal ML models.</i></small></p>
+        </div>
+        <h5>Tools and technologies used</h5>
+        <div class="tag-list">
+          <span class="tag">Supervised machine learning (Random forest, XGBoost, SVMs)</span>
+          <span class="tag">Human-in-the-loop experiments</span>
+          <span class="tag">Data analytics and Visualization</span>
+          <span class="tag">Model robustness analysis</span>
+        </div>
+      </article>
+
+      <article class="publication-card">
+        <h3>An Agent-Based Approach for Air Traffic Conflict Resolution in a Flow-Centric Airspace</h3>
+        <ul>
+          <li>Conceptualized and investigated air traffic conflict resolution in flow-centric operations, where the traffic was modeled as intersecting flows.</li>
+          <li>Developed a novel agent-based model to resolve conflicts in flow-centric airspace, where a deep reinforcement learning-based agent was responsible for resolving flow-based air traffic conflicts in enroute sectors.</li>
+        </ul>
+        <div align="center">
+          <img src="./assets/img/flow_centric_overview.png" alt="Flow-centric conflict resolution" width="500">
+          <p><small><i>A concept diagram for the interaction between the agent and the learning environment. Scenarios involving
+            interflow and intra-flow conflict are generated and the vector representation of the extracted features is used by the agent
+            to propose an action based on the learned policy, thereby reaching a new state and receiving a certain reward. The
+            updated actions pass into a self-stabilizing algorithm which ensures intra-flow safe separation and outputs the updated
+            location and speed of the aircraft in both flows.</i></small></p>
+        </div>
+        <h5>Tools and technologies used</h5>
+        <div class="tag-list">
+          <span class="tag">Deep reinforcement learning (PPO, DQN)</span>
+          <span class="tag">Agent-based modeling</span>
+        </div>
+      </article>
+
+      <article class="publication-card">
+        <h3>Continuous descent flight operations in Singapore Changi airport</h3>
+        <ul>
+          <li>Worked with a team of 4 scientists on the development of an ML approach for continuous descent prediction for aircraft arriving at Singapore Changi airport.</li>
+          <li>Liaised with THALES AirLab for integration of the ML methodologies into an air traffic control digital twin for evaluation by air traffic controllers.</li>
+        </ul>
+        <h5>Tools and technologies used</h5>
+        <div class="tag-list">
+          <span class="tag">Random forest regression</span>
+          <span class="tag">Feature engineering</span>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
