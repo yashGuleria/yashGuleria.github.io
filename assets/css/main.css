@@ -5306,9 +5306,7 @@ a img {
 }
 
 .gallery-item:hover {
-  transform: scale(1.06);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
-  z-index: 10;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
 }
 
 .gallery-item img {
@@ -5317,6 +5315,11 @@ a img {
   object-fit: cover;
   display: block;
   cursor: zoom-in;
+  transition: transform 0.35s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
 }
 
 .gallery-item-info {
