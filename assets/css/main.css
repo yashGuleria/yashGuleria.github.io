@@ -5326,7 +5326,9 @@ a img {
   padding-top: 0;
 }
 
-.gallery-item-info p {
+.gallery-item-info p,
+.gallery-item-info ul,
+.gallery-item-info li {
   margin: 0;
   font-size: 13px;
   color: #666;
