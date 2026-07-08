@@ -49,49 +49,52 @@
 
     <!-- About Section -->
     <section id="about">
-      <div class="user-details">
-        <h1>Hey there!</h1>
-        <picture>
-          <source
-            type="image/webp"
-            srcset="./assets/img/jpg/yash2.png"
-            alt="Professional Me"
-            width="45%"
-            style="border-radius: 50%"
-          />
-          <img
-            src="./assets/img/jpg/ava.jpg"
-            alt="Professional Me"
-            width="20%"
-            style="border-radius: 50%"
-          />
-        </picture>
-        <div style="text-align: justify; text-justify: inter-word;">
-          <p>Hi, I am Yash. I am an Assistant Professor at the <a href="https://som.iitmandi.ac.in/" style="text-decoration: none; color: #1488cc;">School of Management, Indian Institute of Technology Mandi</a>. My research focuses on machine learning, generative AI, human-AI collaboration, and intelligent decision support systems, with applications in operational and safety-critical environments.</p>
-          <p>Before joining IIT Mandi, I completed my PhD and postdoctoral research at the <a href="https://www.ntu.edu.sg/ATMRI" style="text-decoration: none; color: #1488cc;">Air Traffic Management Research Institute</a> (ATMRI),
-          <a href="https://www.ntu.edu.sg/" style="text-decoration: none; color: #1488cc;">Nanyang Technological University (NTU)</a>, Singapore.
-          At ATMRI, I worked at the intersection of machine learning, optimization, and air traffic control, to address the near future air traffic demands.</p>
-          <p>I also lead a team of scientists working on generative artificial intelligence applications in air traffic management.
-          I received my Ph.D. in 2024, with a focus on developing machine learning
-          models for air traffic conflict resolution for increased acceptance by the air traffic controllers.</p>
+      <div class="about-wrapper">
+        <div class="about-photo">
+          <picture>
+            <source type="image/webp" srcset="./assets/img/jpg/yash2.png" />
+            <img src="./assets/img/jpg/ava.jpg" alt="Yash Guleria" />
+          </picture>
+        </div>
+        <div class="about-text">
+          <h1 class="about-greeting">Hey there!</h1>
+          <p>Hi, I am Yash. I am an Assistant Professor at the <a href="https://som.iitmandi.ac.in/">School of Management, Indian Institute of Technology Mandi</a>. My research focuses on machine learning, generative AI, human-AI collaboration, and intelligent decision support systems, with applications in operational and safety-critical environments.</p>
+          <p>Before joining IIT Mandi, I completed my PhD and postdoctoral research at the <a href="https://www.ntu.edu.sg/ATMRI">Air Traffic Management Research Institute</a> (ATMRI), <a href="https://www.ntu.edu.sg/">Nanyang Technological University (NTU)</a>, Singapore. At ATMRI, I worked at the intersection of machine learning, optimization, and air traffic control, to address the near future air traffic demands.</p>
+          <p>I also lead a team of scientists working on generative artificial intelligence applications in air traffic management. I received my Ph.D. in 2024, with a focus on developing machine learning models for air traffic conflict resolution for increased acceptance by the air traffic controllers.</p>
         </div>
       </div>
     </section>
 
     <!-- Research Interests Section -->
-    <div class="user-details">
-      <h1>Research Interests</h1>
-      <section id="news" style="text-align: left;">
-        <ul>
-          <li>Large Language Models (LLMs)</li>
-          <li>Deep Learning</li>
-          <li>Reinforcement Learning</li>
-          <li>Data-centric AI</li>
-          <li>Applied AI</li>
-          <li>Intelligent Transportation systems</li>
-        </ul>
-      </section>
-    </div>
+    <section id="news" class="interests-section">
+      <h2 class="section-title">Research Interests</h2>
+      <div class="interests-grid">
+        <div class="interest-card">
+          <i class="fa fa-comments interest-icon" aria-hidden="true"></i>
+          <span>Large Language Models (LLMs)</span>
+        </div>
+        <div class="interest-card">
+          <i class="fa fa-sitemap interest-icon" aria-hidden="true"></i>
+          <span>Deep Learning</span>
+        </div>
+        <div class="interest-card">
+          <i class="fa fa-gamepad interest-icon" aria-hidden="true"></i>
+          <span>Reinforcement Learning</span>
+        </div>
+        <div class="interest-card">
+          <i class="fa fa-database interest-icon" aria-hidden="true"></i>
+          <span>Data-centric AI</span>
+        </div>
+        <div class="interest-card">
+          <i class="fa fa-lightbulb-o interest-icon" aria-hidden="true"></i>
+          <span>Applied AI</span>
+        </div>
+        <div class="interest-card">
+          <i class="fa fa-plane interest-icon" aria-hidden="true"></i>
+          <span>Intelligent Transportation Systems</span>
+        </div>
+      </div>
+    </section>
 
     <!-- Import JS: Particles Theme -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
