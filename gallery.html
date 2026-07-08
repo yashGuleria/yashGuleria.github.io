@@ -85,34 +85,50 @@
       </div>
     </main>
 
-    <!-- Lightbox overlay -->
-    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
-      <button class="lightbox-close" aria-label="Close">&times;</button>
-      <img id="lightbox-img" src="" alt="" />
+    <!-- Card modal overlay -->
+    <div id="gallery-modal" class="gallery-modal" role="dialog" aria-modal="true">
+      <div class="gallery-modal-card" id="gallery-modal-card"></div>
     </div>
 
     <script>
-      var lightbox = document.getElementById('lightbox');
-      var lightboxImg = document.getElementById('lightbox-img');
+      var modal = document.getElementById('gallery-modal');
 
-      document.querySelectorAll('.gallery-item img').forEach(function (img) {
-        img.addEventListener('click', function () {
-          lightboxImg.src = img.src;
-          lightboxImg.alt = img.alt;
-          lightbox.classList.add('open');
+      document.querySelectorAll('.gallery-item').forEach(function (item) {
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', function () {
+          var images = item.querySelectorAll('img');
+          var infoEl = item.querySelector('.gallery-item-info');
+
+          var imgHtml = '';
+          if (images.length === 1) {
+            imgHtml = '<img src="' + images[0].src + '" alt="' + images[0].alt + '" />';
+          } else {
+            imgHtml = '<div class="gallery-modal-images">';
+            images.forEach(function (img) {
+              imgHtml += '<img src="' + img.src + '" alt="' + img.alt + '" />';
+            });
+            imgHtml += '</div>';
+          }
+
+          document.getElementById('gallery-modal-card').innerHTML =
+            '<button class="gallery-modal-close" aria-label="Close">&times;</button>' +
+            imgHtml +
+            '<div class="gallery-item-info">' + infoEl.innerHTML + '</div>';
+
+          document.querySelector('.gallery-modal-close').addEventListener('click', closeModal);
+          modal.classList.add('open');
         });
       });
 
-      document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
-      lightbox.addEventListener('click', function (e) {
-        if (e.target === lightbox) closeLightbox();
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) closeModal();
       });
       document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'Escape') closeModal();
       });
 
-      function closeLightbox() {
-        lightbox.classList.remove('open');
+      function closeModal() {
+        modal.classList.remove('open');
       }
     </script>
   </body>

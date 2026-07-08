@@ -5306,7 +5306,9 @@ a img {
 }
 
 .gallery-item:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+  transform: scale(1.04);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+  z-index: 10;
 }
 
 .gallery-item img {
@@ -5314,12 +5316,7 @@ a img {
   height: 220px;
   object-fit: cover;
   display: block;
-  cursor: zoom-in;
-  transition: transform 0.35s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .gallery-item-info {
@@ -5342,50 +5339,101 @@ a img {
   line-height: 1.5;
 }
 
-/* ── Lightbox ────────────────────────────────────────────────────── */
-.lightbox {
+/* ── Full-card modal ─────────────────────────────────────────────── */
+.gallery-modal {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.88);
+  background: rgba(0, 0, 0, 0.85);
   z-index: 2000;
   align-items: center;
   justify-content: center;
-  cursor: zoom-out;
+  padding: 24px;
+  overflow-y: auto;
 }
 
-.lightbox.open {
+.gallery-modal.open {
   display: flex;
 }
 
-.lightbox img {
-  max-width: 90vw;
+.gallery-modal-card {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 860px;
+  width: 100%;
   max-height: 90vh;
-  object-fit: contain;
-  border-radius: 4px;
-  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.6);
-  cursor: default;
-  /* override the gallery-item img hover rule */
-  transform: none !important;
-  transition: none !important;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 16px 56px rgba(0, 0, 0, 0.5);
 }
 
-.lightbox-close {
+.gallery-modal-card > img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 12px 0 0;
+}
+
+.gallery-modal-images {
+  display: flex;
+  gap: 4px;
+}
+
+.gallery-modal-images img {
+  flex: 1;
+  min-width: 0;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-modal-images img:first-child {
+  border-radius: 12px 0 0 0;
+}
+
+.gallery-modal-images img:last-child {
+  border-radius: 0 12px 0 0;
+}
+
+.gallery-modal-card .gallery-item-info {
+  padding: 20px 24px 28px;
+}
+
+.gallery-modal-card .gallery-item-info h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.gallery-modal-card .gallery-item-info p,
+.gallery-modal-card .gallery-item-info ul,
+.gallery-modal-card .gallery-item-info li {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.gallery-modal-close {
   position: absolute;
-  top: 16px;
-  right: 24px;
-  background: none;
+  top: 12px;
+  right: 14px;
+  background: rgba(0, 0, 0, 0.45);
   border: none;
   color: #fff;
-  font-size: 44px;
-  line-height: 1;
+  font-size: 26px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   cursor: pointer;
-  opacity: 0.8;
-  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: background 0.2s;
 }
 
-.lightbox-close:hover {
-  opacity: 1;
+.gallery-modal-close:hover {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .gallery-item--multi {
